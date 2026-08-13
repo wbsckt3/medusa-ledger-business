@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Medusa Cloud — Trazabilidad contable para tu negocio",
+    "description": "Medusa Cloud: ledger de trazabilidad contable multi-tenant para unidades de negocio. El Core open source vive en medusa-ledger."
+  },
+  "nav": {
+    "home": "Medusa Cloud inicio",
+    "what": "Qué es",
+    "why": "Por qué",
+    "how": "Cómo funciona",
+    "erp": "Evolución ERP",
+    "oss": "Open Source",
+    "open": "Abrir Medusa",
+    "menu_open": "Abrir menú",
+    "menu_close": "Cerrar menú",
+    "main": "Principal",
+    "language": "Idioma",
+    "whatsapp": "Contactar por WhatsApp"
+  },
+  "hero": {
+    "eyebrow": "Medusa Cloud · Producto comercial",
+    "title": "Ledger (Blockchain) de trazabilidad contable para <em>tu negocio</em>",
+    "lead": "Producto hospedado multi-tenant. El motor open source es Medusa Ledger Core.",
+    "cta_primary": "Abrir Medusa Analytics",
+    "cta_secondary": "Ver demo en vivo",
+    "cta_oss": "Librería Open Source",
+    "b1": "SHA-256 · append-only",
+    "b2": "1 cadena por unidad de negocio",
+    "b3": "Pagos → ancla automática"
+  },
+  "what": {
+    "title": "Qué problema resuelve",
+    "lead": "No es “tener blockchain”. Es responder con evidencia:",
+    "q": "¿Quién generó qué dinero, quién lo recibió, cuánto correspondía a cada participante y quién puede demostrarlo?",
+    "c1_title": "Capa de verdad empresarial",
+    "c1_text": "El ERP dice qué tiene registrado. Medusa dice qué ocurrió de verdad: quién lo generó, quién lo aprobó, cómo se distribuyó y cómo se concilió.",
+    "c2_title": "Un ledger por unidad",
+    "c2_text": "Cada unidad de negocio tiene socios distintos: cadena aislada, hub Medusa propio, sin mezclar dinero entre unidades.",
+    "c3_title": "No reemplaza tu pasarela",
+    "c3_text": "Tu pasarela de pagos cobra. Medusa ancla la prueba (hash + bloque). Odoo, SAP, BI e IA pueden consumir esa verdad después.",
+    "c4_title": "Gobierno de transacciones",
+    "c4_text": "Capa de trazabilidad, conciliación y gobierno de las transacciones: quién generó qué dinero, quién lo recibió, cuánto correspondía a cada participante y quién puede demostrarlo — en tiempo real."
+  },
+  "flow": {
+    "title": "Flujo de la unidad contable",
+    "lead": "Usuario | cliente → operativo → tu unidad de negocio → tu tenant o ERP → pagos, facturación y distribución → entidad de regulación.",
+    "s1": "Usuario | cliente",
+    "s2": "Operativo",
+    "s3": "Tu unidad de negocio",
+    "s4": "Tu tenant o ERP",
+    "s5": "Pagos · facturación · distribución",
+    "s6": "Entidad de regulación"
+  },
+  "mvp": {
+    "title": "MVP | demo",
+    "lead": "Cadena aislada por unidad, anclada a pagos reales.",
+    "i1": "Ledger (SHA-256, append-only) + API Medusa",
+    "i2": "Ancla automática al confirmar pagos (idempotente)",
+    "i3": "Hub en vivo: bloques, pending, sellar, verificar cadena",
+    "i4": "Login Medusa + acceso desde el dashboard de la unidad",
+    "i5": "Eventos en tiempo real por socket",
+    "cta": "Entrar al hub"
+  },
+  "pitch": {
+    "p1": "Tu empresa tiene una fuente de verdad empresarial verificable, independiente del ERP.",
+    "p2": "Trust Ledger as a Service — Blockchain-as-a-Business-Ledger por unidad de negocio.",
+    "p3": "El ERP deja de ser el origen de la verdad y pasa a ser consumidor de la verdad."
+  },
+  "erp": {
+    "title": "Evolución natural hacia el ERP",
+    "lead": "No reemplazamos Odoo, SAP, o tu ERP de golpe, es imposible… Reemplazamos la dependencia del ERP como única fuente de verdad.",
+    "pain": "Sabemos del dolor de cabeza que suponen los reportes de facturación electrónica de la DIAN y las entidades públicas de vigilancia y control del Estado. Por eso desarrollamos un ledger de trazabilidad contable para ecosistemas y negocios donde se requiera vigilar la trazabilidad de las transacciones realizadas.",
+    "restore_title": "Medusa blockchain no reemplaza tu ERP",
+    "restore": "Restaura la naturaleza fundacional del mismo y libera del peso de la responsabilidad contable y fiscal a tu BD.",
+    "g1_title": "ERP 1.0",
+    "g1_text": "Base de datos central → reportes.",
+    "g2_title": "ERP 2.0",
+    "g2_text": "ERP + APIs + cloud + microservicios.",
+    "g3_title": "Trust Ledger",
+    "g3_text": "Eventos de negocio → ledger inmutable → ERP, IA y BI consumen evidencia verificable.",
+    "events_title": "Eventos empresariales, no solo montos",
+    "events_text": "ORDER_CREATED, PAYMENT_AUTHORIZED, SERVICE_COMPLETED, COMMISSION_CALCULATED, SETTLEMENT_DONE, INVOICE_PAID… historia completa reconstruible."
+  },
+  "how": {
+    "title": "Cómo funciona",
+    "lead": "Tres pasos para socios y operadores de la unidad.",
+    "step1_title": "Ocurre el dinero",
+    "step1_text": "Pago, wallet o crédito de la unidad genera el hecho de negocio.",
+    "step2_title": "Se ancla en Medusa",
+    "step2_text": "La tx entra al pending, se sella en un bloque con previousHash y SHA-256.",
+    "step3_title": "Se demuestra en vivo",
+    "step3_text": "El hub muestra la cadena, filtra por origen y verifica integridad si alguien altera un hash."
+  },
+  "cta": {
+    "title": "Prueba Medusa en la unidad demo Tuk Tuk",
+    "text": "Tuk Tuk es la unidad de negocio demo donde ya corre el ledger. Entra al hub, verifica la cadena y ve el flujo de trazabilidad contable en vivo.",
+    "primary": "Login Medusa Analytics",
+    "secondary": "Dashboard de la unidad demo"
+  },
+  "footer": {
+    "blurb": "Medusa Cloud — trazabilidad contable multi-tenant para unidades de negocio. Core OSS en medusa-ledger.",
+    "product": "Producto",
+    "ecosystem": "Demo",
+    "open_hub": "Abrir hub",
+    "login": "Login Medusa",
+    "oss": "Open Source Core",
+    "tuki_app": "App unidad demo",
+    "tuki_dash": "Dashboard demo",
+    "copy": "Medusa Cloud · Powered by P2L"
+  }
+}
