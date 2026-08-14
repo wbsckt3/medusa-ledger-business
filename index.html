@@ -56,11 +56,10 @@
     .brand__logo {
       height: 48px; width: auto; border-radius: 10px;
       background: #fff; padding: 4px;
-      /* Cloud accent: ámbar sobre el azul del logo */
-      filter: sepia(0.45) saturate(1.55) hue-rotate(-18deg) brightness(0.98);
     }
     .hero__visual {
       display: grid; place-items: center;
+      gap: 14px;
       min-height: 280px;
       background: transparent;
       border: none;
@@ -73,8 +72,18 @@
       background: transparent;
       padding: 0;
       box-shadow: none;
-      filter: sepia(0.45) saturate(1.55) hue-rotate(-18deg) brightness(0.98);
     }
+    .logo-mark {
+      margin: 0;
+      font-size: .92rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .logo-mark__dim { color: #cbd5e1; font-weight: 700; }
+    .logo-mark__hot { color: #0a0a0a; }
+    .logo-mark__sep { color: #cbd5e1; font-weight: 600; margin: 0 .35em; }
     .brand__name { font-size: 1.05rem; }
     .nav { display: flex; align-items: center; gap: 6px; }
     .nav a { padding: 8px 12px; border-radius: 999px; font-size: .9rem; font-weight: 600; color: var(--muted); }
@@ -364,6 +373,9 @@
         </div>
         <div class="hero__visual" aria-hidden="true">
           <img src="assets/medusa-logo.png" alt="" width="220" height="220" />
+          <p class="logo-mark">
+            <span class="logo-mark__dim">Docker OSS</span><span class="logo-mark__sep">|</span><span class="logo-mark__hot">Business</span>
+          </p>
         </div>
       </div>
     </section>
