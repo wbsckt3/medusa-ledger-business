@@ -9,6 +9,7 @@
     "why": "Por qué",
     "how": "Cómo funciona",
     "erp": "Evolución ERP",
+    "model": "Core + Cloud",
     "oss": "Open Source",
     "open": "Abrir Medusa",
     "menu_open": "Abrir menú",
@@ -65,6 +66,24 @@
     "p1": "Tu empresa tiene una fuente de verdad empresarial verificable, independiente del ERP.",
     "p2": "Trust Ledger as a Service — Blockchain-as-a-Business-Ledger por unidad de negocio.",
     "p3": "El ERP deja de ser el origen de la verdad y pasa a ser consumidor de la verdad."
+  },
+  "model": {
+    "title": "Open Source Core + Medusa Cloud",
+    "lead": "No abrimos todo el producto comercial. Abrimos el motor; Cloud es la ventaja multi-tenant.",
+    "c1_title": "ERP → registra",
+    "c1_text": "Odoo, SAP o tu ERP siguen operando el negocio.",
+    "c2_title": "Medusa → prueba",
+    "c2_text": "Capa de evidencia verificable e inmutable por unidad.",
+    "c3_title": "IA → interpreta",
+    "c3_text": "Consume la cadena para explicar y auditar.",
+    "c4_title": "BI → analiza",
+    "c4_text": "Reportes sobre hechos demostrables, no solo filas en BD.",
+    "arch_title": "Arquitectura de producto",
+    "arch_text": "Medusa Core (OSS) = ledger + API. Medusa Cloud = multi-tenant, white-label, anclas de pago, hubs, SLA, ERP.",
+    "sponsors_title": "GitHub Sponsors = descubrimiento",
+    "sponsors_text": "Sponsors no es solo donación: es canal internacional hacia el Core. Cloud / Business / Enterprise siguen siendo el negocio.",
+    "cta_oss": "Ver librería Open Source",
+    "cta_sponsors": "Sponsors"
   },
   "erp": {
     "title": "Evolución natural hacia el ERP",

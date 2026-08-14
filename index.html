@@ -53,7 +53,25 @@
     .site-header.is-scrolled { border-color: var(--line); box-shadow: 0 8px 24px rgba(10,10,10,.06); }
     .site-header__inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; }
-    .brand__logo { height: 48px; width: auto; border-radius: 10px; }
+    .brand__logo {
+      height: 48px; width: auto; border-radius: 10px;
+      background: #fff; padding: 4px;
+      /* Cloud accent: ámbar sobre el azul del logo */
+      filter: sepia(0.45) saturate(1.55) hue-rotate(-18deg) brightness(0.98);
+    }
+    .hero__visual {
+      display: grid; place-items: center;
+      padding: 28px; border-radius: 28px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow); min-height: 320px;
+    }
+    .hero__visual img {
+      width: min(220px, 70%); border-radius: 24px;
+      background: #fff; padding: 18px;
+      box-shadow: 0 10px 28px rgba(194,65,12,.12);
+      filter: sepia(0.45) saturate(1.55) hue-rotate(-18deg) brightness(0.98);
+    }
     .brand__name { font-size: 1.05rem; }
     .nav { display: flex; align-items: center; gap: 6px; }
     .nav a { padding: 8px 12px; border-radius: 999px; font-size: .9rem; font-weight: 600; color: var(--muted); }
@@ -111,19 +129,6 @@
     .hero__badge {
       padding: 8px 12px; border-radius: 12px; background: #fff; border: 1px solid var(--line);
       font-size: .82rem; font-weight: 600; color: var(--muted);
-    }
-    .hero__visual {
-      display: grid; place-items: center;
-      padding: 28px; border-radius: 28px;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(125,211,252,.35), transparent 55%),
-        linear-gradient(160deg, #0a0a0a, #1e293b 55%, #334155);
-      box-shadow: var(--shadow); min-height: 320px;
-    }
-    .hero__visual img {
-      width: min(220px, 70%); border-radius: 24px;
-      background: #fff; padding: 18px;
-      box-shadow: 0 16px 40px rgba(10,10,10,.35);
     }
 
     .section { padding: 72px 0; }
@@ -318,6 +323,7 @@
       <nav class="nav" id="mainNav" data-i18n-aria="nav.main" aria-label="Principal">
         <a href="#what" data-i18n="nav.what">Qué es</a>
         <a href="#mvp" data-i18n="nav.why">Por qué</a>
+        <a href="#model" data-i18n="nav.model">Core + Cloud</a>
         <a href="#how" data-i18n="nav.how">Cómo funciona</a>
         <a href="#erp" data-i18n="nav.erp">Evolución ERP</a>
         <a href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="nav.oss">Open Source</a>
@@ -429,6 +435,45 @@
           <article class="pitch"><strong>01</strong><span data-i18n="pitch.p1">Fuente de verdad verificable</span></article>
           <article class="pitch"><strong>02</strong><span data-i18n="pitch.p2">Trust Ledger as a Service</span></article>
           <article class="pitch"><strong>03</strong><span data-i18n="pitch.p3">ERP como consumidor</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="model">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="model.title">Open Source Core + Medusa Cloud</h2>
+          <p data-i18n="model.lead">No abrimos todo el producto comercial. Abrimos el motor; Cloud es la ventaja multi-tenant.</p>
+        </div>
+        <div class="cards cards--4" style="margin-bottom:18px;">
+          <article class="card">
+            <h3 data-i18n="model.c1_title">ERP → registra</h3>
+            <p data-i18n="model.c1_text">Odoo, SAP o tu ERP siguen operando el negocio.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="model.c2_title">Medusa → prueba</h3>
+            <p data-i18n="model.c2_text">Capa de evidencia verificable e inmutable por unidad.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="model.c3_title">IA → interpreta</h3>
+            <p data-i18n="model.c3_text">Consume la cadena para explicar y auditar.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="model.c4_title">BI → analiza</h3>
+            <p data-i18n="model.c4_text">Reportes sobre hechos demostrables, no solo filas en BD.</p>
+          </article>
+        </div>
+        <div class="erp-restore" style="margin-top:8px;">
+          <h3 data-i18n="model.arch_title">Arquitectura de producto</h3>
+          <p data-i18n="model.arch_text">Medusa Core (OSS) = ledger + API. Medusa Cloud = multi-tenant, white-label, anclas de pago, hubs, SLA, ERP.</p>
+        </div>
+        <div class="card" style="margin-top:20px;">
+          <h3 data-i18n="model.sponsors_title">GitHub Sponsors = descubrimiento</h3>
+          <p data-i18n="model.sponsors_text">Sponsors no es solo donación: es canal internacional hacia el Core. Cloud / Business / Enterprise siguen siendo el negocio.</p>
+          <p style="margin-top:14px;">
+            <a class="btn btn--outline" href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="model.cta_oss">Ver librería Open Source</a>
+            <a class="btn btn--primary" style="margin-left:8px;" href="https://github.com/sponsors/wbsckt3" data-i18n="model.cta_sponsors">Sponsors</a>
+          </p>
         </div>
       </div>
     </section>

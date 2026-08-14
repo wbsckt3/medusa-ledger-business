@@ -14,6 +14,7 @@ Textos derivados de:
 
 - `BLOCKCHAIN/P2L n-1-n medusa ledger/2. Blockchain en flujo de negocio RESULTADO.txt`
 - `BLOCKCHAIN/P2L n-1-n medusa ledger/3. Blockchain en flujo de negocio COMERCIAL EVOLUCION A ERP.txt`
+- `BLOCKCHAIN/P2L n-1-n medusa ledger/3. Blockchain en flujo de negocio MEDUSA A GITHUB SPONSORS.txt` (sección Core + Cloud / Sponsors)
 
 ## Publicar
 
