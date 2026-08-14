@@ -10,6 +10,8 @@
     "how": "How it works",
     "erp": "ERP evolution",
     "model": "Core + Cloud",
+    "p2l": "P2L integration",
+    "pricing": "Plans",
     "oss": "Open Source",
     "open": "Open Medusa",
     "menu_open": "Open menu",
@@ -83,6 +85,43 @@
     "sponsors_text": "Sponsors is not only donation: it’s an international discovery channel for Core. Cloud / Business / Enterprise remain the business.",
     "cta_oss": "See Open Source library",
     "cta_sponsors": "Sponsors"
+  },
+  "p2l": {
+    "title": "P2L integration",
+    "lead": "Medusa Cloud is not a pilot: it runs in production inside multi-tenant P2L, with real partners and real payments.",
+    "c1_title": "Core embedded via NPM",
+    "c1_text": "P2L installs @medusa-ledger/core as the ledger engine. Your ERP does not rewrite accounting — it consumes verifiable evidence per unit.",
+    "c2_title": "Live commercial proof",
+    "c2_text": "Tuk Tuk is an active white-label tenant. Every confirmed ePayco charge creates a PAYMENT_CAPTURED anchor on that unit’s chain.",
+    "c3_title": "1 chain per white-label",
+    "c3_text": "Each brand or business unit gets an isolated ledger, its own Medusa hub and separate partners. No mixed money across brands.",
+    "cta": "See Tuk Tuk live demo"
+  },
+  "pricing": {
+    "title": "Core, Sponsors and Cloud plans",
+    "lead": "Core is open for adoption; Cloud, Business and Enterprise are the commercial path.",
+    "community": "Community",
+    "community_desc": "Medusa Core OSS — append-only ledger + API",
+    "community_price": "$0",
+    "sponsor": "Sponsor",
+    "sponsor_desc": "Maintainer support · badge · early roadmap",
+    "sponsor_price": "from $5/mo",
+    "cloud": "Cloud",
+    "cloud_desc": "Hosted ledger · 1 business unit · hub + anchors",
+    "cloud_price": "monthly",
+    "business": "Business",
+    "business_desc": "Multi-tenant white-label · integrations (P2L Medusa today)",
+    "business_price": "monthly",
+    "enterprise": "Enterprise",
+    "enterprise_desc": "SLA · compliance · ERP connectors · dedicated support",
+    "enterprise_price": "contract",
+    "cta_sponsor": "GitHub Sponsors",
+    "cta_contact": "Contact sales"
+  },
+  "install": {
+    "title": "Install anywhere",
+    "text": "Node, Spring Boot, Docker and other stacks are documented on the Open Source landing — for your technical team and architects.",
+    "cta": "See Open Source landing"
   },
   "erp": {
     "title": "Natural evolution toward ERP",

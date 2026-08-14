@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Medusa Ledger — libro mayor de confianza de código abierto para empresas." data-i18n-meta="meta.description" />
-  <meta name="theme-color" content="#c2410c" />
+  <meta name="theme-color" content="#0f766e" />
   <title data-i18n="meta.title">Medusa Ledger — Trazabilidad contable</title>
   <link rel="icon" href="assets/medusa-logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,15 +13,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
-      /* Ámbar / cobre — contraste con el azul claro del logo Medusa */
-      --accent-50: #fff7ed;
-      --accent-100: #ffedd5;
-      --accent-200: #fed7aa;
-      --accent-400: #fb923c;
-      --accent-500: #f97316;
-      --accent-600: #ea580c;
-      --accent-700: #c2410c;
-      --accent-800: #9a3412;
+      /* Teal / slate — paleta comercial Business */
+      --accent-50: #f0fdfa;
+      --accent-100: #ccfbf1;
+      --accent-200: #99f6e4;
+      --accent-400: #2dd4bf;
+      --accent-500: #14b8a6;
+      --accent-600: #0d9488;
+      --accent-700: #0f766e;
+      --accent-800: #134e4a;
       --ink: #0a0a0a;
       --muted: #64748b;
       --line: #e2e8f0;
@@ -96,7 +96,7 @@
     }
     .btn--primary {
       background: linear-gradient(135deg, var(--accent-500), var(--accent-700));
-      color: #fff; box-shadow: 0 10px 28px rgba(194,65,12,.35);
+      color: #fff; box-shadow: 0 10px 28px rgba(15,118,110,.35);
     }
     .btn--outline { border: 2px solid var(--accent-200); color: var(--accent-800); background: #fff; }
     .btn--lg { padding: 14px 28px; font-size: 1rem; }
@@ -119,7 +119,7 @@
       padding: calc(var(--header-h) + 48px) 0 64px;
       background:
         radial-gradient(ellipse 80% 60% at 100% 0%, rgba(125,211,252,.22), transparent 60%),
-        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(249,115,22,.12), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(20,184,166,.14), transparent 55%),
         linear-gradient(180deg, #f8fbff 0%, #fff 100%);
     }
     .hero__grid {
@@ -176,7 +176,7 @@
     .erp-restore {
       margin: 28px 0 0; padding: 28px 26px; border-radius: 18px;
       background:
-        linear-gradient(135deg, #0a0a0a 0%, #1c1917 55%, #292524 100%);
+        linear-gradient(135deg, #0f172a 0%, #134e4a 55%, #1e293b 100%);
       color: #f8fafc; text-align: center;
       box-shadow: 0 16px 40px rgba(10,10,10,.2);
     }
@@ -288,13 +288,46 @@
       text-align: center; padding: 48px 24px; border-radius: 24px;
       background:
         radial-gradient(circle at 20% 20%, rgba(125,211,252,.2), transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(249,115,22,.12), transparent 45%),
-        #fff7ed;
+        radial-gradient(circle at 80% 80%, rgba(20,184,166,.14), transparent 45%),
+        #f0fdfa;
       border: 1px solid var(--accent-100);
     }
     .cta-box h2 { margin: 0 0 10px; font-size: clamp(1.4rem, 3vw, 1.9rem); }
     .cta-box p { margin: 0 auto 22px; color: var(--muted); max-width: 560px; }
     .cta-box .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    .pricing-table {
+      width: 100%; border-collapse: separate; border-spacing: 0;
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--line); background: #fff;
+      box-shadow: 0 10px 30px rgba(10,10,10,.04);
+    }
+    .pricing-table th,
+    .pricing-table td {
+      padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line);
+      font-size: .92rem;
+    }
+    .pricing-table th {
+      background: var(--accent-50); color: var(--accent-800);
+      font-weight: 800; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table td:first-child { font-weight: 700; color: var(--ink); white-space: nowrap; }
+    .pricing-table td:nth-child(2) { color: var(--muted); }
+    .pricing-table td:last-child {
+      font-weight: 800; color: var(--accent-700); text-align: right; white-space: nowrap;
+    }
+    .pricing-table tr:nth-child(4) td { background: var(--accent-50); }
+    .pricing-cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
+
+    .install-box {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 22px 24px; border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--accent-50), #fff);
+      border: 1px solid var(--accent-200);
+    }
+    .install-box h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--accent-800); }
+    .install-box p { margin: 0; color: var(--muted); font-size: .94rem; max-width: 560px; }
 
     .footer {
       background: #0a0a0a; color: #cbd5e1; padding: 48px 0 28px; font-size: .9rem;
@@ -350,6 +383,8 @@
         <a href="#what" data-i18n="nav.what">Qué es</a>
         <a href="#mvp" data-i18n="nav.why">Por qué</a>
         <a href="#model" data-i18n="nav.model">Core + Cloud</a>
+        <a href="#p2l" data-i18n="nav.p2l">Integración P2L</a>
+        <a href="#pricing" data-i18n="nav.pricing">Planes</a>
         <a href="#how" data-i18n="nav.how">Cómo funciona</a>
         <a href="#erp" data-i18n="nav.erp">Evolución ERP</a>
         <a href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="nav.oss">Open Source</a>
@@ -502,6 +537,88 @@
             <a class="btn btn--outline" href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="model.cta_oss">Ver librería Open Source</a>
             <a class="btn btn--primary" style="margin-left:8px;" href="https://github.com/sponsors/wbsckt3" data-i18n="model.cta_sponsors">Sponsors</a>
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="p2l">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="p2l.title">Integración P2L</h2>
+          <p data-i18n="p2l.lead">Medusa Cloud no es un piloto: corre en producción dentro de P2L multi-tenant, con socios reales y pagos reales.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3 data-i18n="p2l.c1_title">Core embebido vía NPM</h3>
+            <p data-i18n="p2l.c1_text">P2L instala @medusa-ledger/core como motor de ledger. Tu ERP no reescribe contabilidad: consume evidencia verificable por unidad.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="p2l.c2_title">Prueba comercial en vivo</h3>
+            <p data-i18n="p2l.c2_text">Tuk Tuk es tenant white-label activo. Cada cobro confirmado en ePayco genera ancla PAYMENT_CAPTURED en la cadena de esa unidad.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="p2l.c3_title">1 cadena por white-label</h3>
+            <p data-i18n="p2l.c3_text">Cada marca o unidad de negocio tiene ledger aislado, hub Medusa propio y socios separados. Sin mezclar dinero entre marcas.</p>
+          </article>
+        </div>
+        <div style="text-align:center;margin-top:28px;">
+          <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/tuki-medusa-analytics" data-i18n="p2l.cta">Ver demo Tuk Tuk en vivo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="pricing.title">Planes Core, Sponsors y Cloud</h2>
+          <p data-i18n="pricing.lead">Core es abierto para adopción; Cloud, Business y Enterprise son el camino comercial.</p>
+        </div>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th scope="col">Plan</th>
+              <th scope="col">Incluye</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="pricing.community">Community</td>
+              <td data-i18n="pricing.community_desc">Medusa Core OSS — ledger append-only + API</td>
+              <td data-i18n="pricing.community_price">$0</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.sponsor">Sponsor</td>
+              <td data-i18n="pricing.sponsor_desc">Apoyo al mantenedor · badge · roadmap temprano</td>
+              <td data-i18n="pricing.sponsor_price">desde $5/mes</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.cloud">Cloud</td>
+              <td data-i18n="pricing.cloud_desc">Ledger hospedado · 1 unidad de negocio · hub + anclas</td>
+              <td data-i18n="pricing.cloud_price">mensual</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.business">Business</td>
+              <td data-i18n="pricing.business_desc">Multi-tenant white-label · integraciones (P2L Medusa hoy)</td>
+              <td data-i18n="pricing.business_price">mensual</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.enterprise">Enterprise</td>
+              <td data-i18n="pricing.enterprise_desc">SLA · compliance · conectores ERP · soporte dedicado</td>
+              <td data-i18n="pricing.enterprise_price">contrato</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pricing-cta">
+          <a class="btn btn--outline" href="https://github.com/sponsors/wbsckt3" data-i18n="pricing.cta_sponsor">GitHub Sponsors</a>
+          <a class="btn btn--primary" href="https://wa.me/573187813116" data-i18n="pricing.cta_contact">Contactar ventas</a>
+        </div>
+        <div class="install-box" style="margin-top:28px;">
+          <div>
+            <h3 data-i18n="install.title">Instálalo donde quieras</h3>
+            <p data-i18n="install.text">Node, Spring Boot, Docker y otros stacks están documentados en la landing Open Source — para tu equipo técnico y arquitectura.</p>
+          </div>
+          <a class="btn btn--outline" href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="install.cta">Ver landing Open Source</a>
         </div>
       </div>
     </section>

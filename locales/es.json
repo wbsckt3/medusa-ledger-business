@@ -10,6 +10,8 @@
     "how": "Cómo funciona",
     "erp": "Evolución ERP",
     "model": "Core + Cloud",
+    "p2l": "Integración P2L",
+    "pricing": "Planes",
     "oss": "Open Source",
     "open": "Abrir Medusa",
     "menu_open": "Abrir menú",
@@ -83,6 +85,43 @@
     "sponsors_text": "Sponsors no es solo donación: es canal internacional hacia el Core. Cloud / Business / Enterprise siguen siendo el negocio.",
     "cta_oss": "Ver librería Open Source",
     "cta_sponsors": "Sponsors"
+  },
+  "p2l": {
+    "title": "Integración P2L",
+    "lead": "Medusa Cloud no es un piloto: corre en producción dentro de P2L multi-tenant, con socios reales y pagos reales.",
+    "c1_title": "Core embebido vía NPM",
+    "c1_text": "P2L instala @medusa-ledger/core como motor de ledger. Tu ERP no reescribe contabilidad: consume evidencia verificable por unidad.",
+    "c2_title": "Prueba comercial en vivo",
+    "c2_text": "Tuk Tuk es tenant white-label activo. Cada cobro confirmado en ePayco genera ancla PAYMENT_CAPTURED en la cadena de esa unidad.",
+    "c3_title": "1 cadena por white-label",
+    "c3_text": "Cada marca o unidad de negocio tiene ledger aislado, hub Medusa propio y socios separados. Sin mezclar dinero entre marcas.",
+    "cta": "Ver demo Tuk Tuk en vivo"
+  },
+  "pricing": {
+    "title": "Planes Core, Sponsors y Cloud",
+    "lead": "Core es abierto para adopción; Cloud, Business y Enterprise son el camino comercial.",
+    "community": "Community",
+    "community_desc": "Medusa Core OSS — ledger append-only + API",
+    "community_price": "$0",
+    "sponsor": "Sponsor",
+    "sponsor_desc": "Apoyo al mantenedor · badge · roadmap temprano",
+    "sponsor_price": "desde $5/mes",
+    "cloud": "Cloud",
+    "cloud_desc": "Ledger hospedado · 1 unidad de negocio · hub + anclas",
+    "cloud_price": "mensual",
+    "business": "Business",
+    "business_desc": "Multi-tenant white-label · integraciones (P2L Medusa hoy)",
+    "business_price": "mensual",
+    "enterprise": "Enterprise",
+    "enterprise_desc": "SLA · compliance · conectores ERP · soporte dedicado",
+    "enterprise_price": "contrato",
+    "cta_sponsor": "GitHub Sponsors",
+    "cta_contact": "Contactar ventas"
+  },
+  "install": {
+    "title": "Instálalo donde quieras",
+    "text": "Node, Spring Boot, Docker y otros stacks están documentados en la landing Open Source — para tu equipo técnico y arquitectura.",
+    "cta": "Ver landing Open Source"
   },
   "erp": {
     "title": "Evolución natural hacia el ERP",
