@@ -135,16 +135,21 @@
       line-height: 1.1; letter-spacing: -.03em; font-weight: 800;
     }
     .hero__title em { font-style: normal; color: var(--accent-600); }
-    .hero__lead { margin: 0 0 24px; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.2rem); max-width: 36rem; font-weight: 600; }
+    .hero__lead { margin: 0 0 24px; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.2rem); max-width: none; font-weight: 600; }
     .hero__ctas {
-      display: flex; flex-wrap: nowrap; align-items: center;
-      gap: 8px; margin-bottom: 22px;
+      display: flex; flex-wrap: nowrap; align-items: stretch;
+      width: 100%; gap: 10px; margin-bottom: 22px;
     }
     .hero__ctas .btn {
-      padding: 11px 14px; font-size: .86rem;
-      flex: 0 1 auto; min-width: 0;
+      flex: 1 1 0;
+      min-width: 0;
+      justify-content: center;
+      text-align: center;
+      padding: 13px 10px;
+      font-size: .9rem;
+      line-height: 1.25;
     }
-    .hero__ctas .btn--lg { padding: 11px 14px; font-size: .86rem; }
+    .hero__ctas .btn--lg { padding: 13px 10px; font-size: .9rem; }
     .hero__badges { display: flex; flex-wrap: wrap; gap: 10px; }
     .hero__badge {
       padding: 8px 12px; border-radius: 12px; background: #fff; border: 1px solid var(--line);
@@ -467,7 +472,6 @@
       <div class="container">
         <div class="section__head">
           <h2 data-i18n="model.title">Open Source Core + Medusa Cloud</h2>
-          <p data-i18n="model.lead">No abrimos todo el producto comercial. Abrimos el motor; Cloud es la ventaja multi-tenant.</p>
         </div>
         <div class="cards cards--4" style="margin-bottom:18px;">
           <article class="card">

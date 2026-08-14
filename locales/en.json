@@ -69,7 +69,6 @@
   },
   "model": {
     "title": "Open Source Core + Medusa Cloud",
-    "lead": "We don’t open the full commercial product. We open the engine; Cloud is the multi-tenant advantage.",
     "c1_title": "ERP → records",
     "c1_text": "Odoo, SAP or your ERP keep running the business.",
     "c2_title": "Medusa → proves",
