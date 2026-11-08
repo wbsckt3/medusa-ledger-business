@@ -60,6 +60,11 @@
         el.setAttribute('content', value)
       }
     })
+
+    const titleEl = document.querySelector('title[data-i18n]')
+    if (titleEl && titleEl.textContent) {
+      document.title = titleEl.textContent
+    }
   }
 
   function syncLangSwitch(active) {

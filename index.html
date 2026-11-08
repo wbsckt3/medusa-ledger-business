@@ -369,6 +369,138 @@
     @media (prefers-reduced-motion: reduce) {
       .pitch::before, .pitch::after { animation: none; }
     }
+
+    /* ======== guía de usuario: mismos colores que las instancias del esquema de despliegue ======== */
+    .wl-bar { margin: 0 0 18px; font-size: .9rem; font-weight: 600; color: var(--muted); }
+    .wl-bar a, .wl-url a { color: var(--accent-700); text-decoration: underline; text-underline-offset: 3px; word-break: break-all; }
+    .wl-url { text-align: center; margin: 14px 0 0; color: var(--muted); font-weight: 600; font-size: .92rem; }
+    .gd { --i1:#f2c500; --i1t:#b98a00; --i2:#a349a4; --i3:#f5821f; --i4:#0061ff; --i5:#1e9e4a; --i5d:#188038; --i6:#b97a57; --i0:#7a7f8a; --red:#e53935;
+          --chip:#eef1f6; --chip-line:#d5dbe5; --hl:#fff3c4; --hl-line:#e0b100; --hl-ink:#7a4b00; background: #f6f7f9; }
+    .gd .i1 { --c:var(--i1); } .gd .i2 { --c:var(--i2); } .gd .i3 { --c:var(--i3); } .gd .i4 { --c:var(--i4); } .gd .i5 { --c:var(--i5d); } .gd .i6 { --c:var(--i6); } .gd .i0 { --c:var(--i0); }
+
+    .gmap { background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin:0 0 22px; position: sticky; top: calc(var(--header-h) + 8px); z-index: 5; box-shadow: 0 8px 24px rgba(10,10,10,.06); }
+    .gmap-h { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:6px; margin-bottom:10px; }
+    .gmap-h strong { font-size:.95rem; } .gmap-h span { font-size:.82rem; color:var(--muted); }
+    .gpills { display:flex; flex-wrap:wrap; gap:8px; }
+    .gpill { display:inline-flex; align-items:center; gap:7px; font-weight:700; font-size:.88rem; color:var(--c); background:color-mix(in srgb, var(--c) 8%, #fff); border:2px solid color-mix(in srgb, var(--c) 45%, transparent); border-radius:99px; padding:4px 12px 4px 5px; transition:transform .12s, box-shadow .12s, opacity .12s; }
+    .gpill.i1 { color:var(--i1t); }
+    .gpill:hover { transform:translateY(-1px); box-shadow:0 2px 8px color-mix(in srgb, var(--c) 30%, transparent); }
+    .gpill small { color:var(--muted); font-weight:500; font-size:.76rem; }
+    .gdot { width:20px; height:20px; border-radius:50%; background:var(--c); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:.72rem; }
+    .gpill[aria-pressed="true"] { border-color:var(--c); box-shadow:0 0 0 3px color-mix(in srgb, var(--c) 25%, transparent); }
+    .gpills.filtering .gpill[aria-pressed="false"] { opacity:.45; }
+
+    .gsec { position:relative; background:color-mix(in srgb, var(--c) 6%, #fff); border:3px solid var(--c); border-radius:14px; padding:20px 24px 22px; margin-bottom:22px; transition:opacity .2s, filter .2s; }
+    .gsec-h { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:8px; }
+    .gsec-h h3 { margin:0; font-size:1.3rem; color:var(--c); letter-spacing:-.01em; }
+    .gsec.i1 .gsec-h h3 { color:var(--i1t); }
+    .gnum { flex:none; width:34px; height:34px; border-radius:50%; background:var(--c); color:#fff; font-weight:800; display:inline-flex; align-items:center; justify-content:center; }
+    .gtags { display:flex; flex-wrap:wrap; gap:6px; margin-left:auto; }
+    .gtag { display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:.74rem; color:var(--c); background:#fff; border:1.5px solid var(--c); border-radius:99px; padding:1px 9px; }
+    .gtag::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--c); }
+    .gtag.i1 { color:var(--i1t); }
+    .gsub { color:#b3261e; font-size:.95rem; margin:0 0 12px; }
+    .gsec p { margin:6px 0; }
+    body.gfiltered .gsec:not(.match) { opacity:.28; filter:saturate(.3); }
+    body.gfiltered .gd .gstep:not(.match), body.gfiltered .gloss__item:not(.match) { opacity:.35; }
+
+    .gdots { list-style:none; padding:0; margin:8px 0; }
+    .gdots > li { position:relative; padding-left:24px; margin:0 0 9px; }
+    .gdots > li::before { content:""; position:absolute; left:4px; top:.6em; width:10px; height:10px; border-radius:50%; background:var(--c); }
+    .gsteps { list-style:none; counter-reset:s; margin:8px 0; padding:0; }
+    .gsteps > li { counter-increment:s; position:relative; padding-left:40px; margin:0 0 12px; }
+    .gsteps > li::before { content:counter(s); position:absolute; left:0; top:0; width:28px; height:28px; border-radius:50%; background:var(--c); color:#fff; font-size:.85rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+    .gsteps--row { display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; }
+    .gsteps--row > li { padding:42px 12px 12px; margin:0; background:#fff; border:2px solid color-mix(in srgb, var(--c) 45%, #fff); border-radius:12px; font-size:.9rem; }
+    .gsteps--row > li::before { left:12px; top:10px; }
+    .gflow-t { margin:20px 0 10px; font-size:1.05rem; }
+
+    .gflow { display:grid; grid-template-columns:1fr 54px 1.15fr 54px 1fr; align-items:stretch; margin:14px 0 10px; }
+    .gcol { display:flex; flex-direction:column; justify-content:center; gap:10px; }
+    .gbox { background:#fff; border:3px solid var(--c); border-radius:12px; padding:10px 12px; font-size:.88rem; color:#334155; line-height:1.45; }
+    .gbox b { display:block; color:var(--c); font-size:.95rem; margin-bottom:2px; }
+    .gbox.i1 b { color:var(--i1t); }
+    .garrow { display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:1.4rem; text-align:center; }
+    .gcap { font-size:.7rem; line-height:1.2; }
+
+    .gnote { border-left:4px solid var(--i1); background:#fff; padding:10px 14px; border-radius:0 10px 10px 0; margin:12px 0 0; font-size:.93rem; }
+    .gnote--ok { border-left-color:var(--i5); }
+    .gnote--bad { border-left-color:var(--red); background:#fff5f5; }
+    .gnote--bad strong:first-child { color:#b3261e; }
+
+    .venn { display:grid; grid-template-columns:1fr 210px 1fr; margin:14px 0 6px; }
+    .venn > .vl, .venn > .vr { grid-row:1; border:3px solid; border-radius:14px; padding:16px 18px; }
+    .venn > .vl { --c:var(--i4); grid-column:1 / 3; border-color:var(--i4); background:color-mix(in srgb, var(--i4) 7%, #fff); padding-right:228px; }
+    .venn > .vr { --c:var(--i5d); grid-column:2 / 4; border-color:var(--i5d); background:color-mix(in srgb, var(--i5) 6%, transparent); padding-left:228px; }
+    .venn > .vx { grid-row:1; grid-column:2; z-index:1; margin:3px 0; background:#d3efe9; border-left:3px solid var(--i5d); border-right:3px solid var(--i4); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:8px; padding:14px 10px; font-size:.9rem; }
+    .vx__k { font-size:.72rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:#00796b; }
+    .vx__eq { font-size:1.6rem; font-weight:800; color:#00796b; line-height:1; }
+    .vx small { color:var(--muted); line-height:1.4; font-size:.8rem; }
+    .vl h4, .vr h4 { margin:0 0 4px; font-size:1.08rem; color:var(--c); }
+    .ghl { font:700 .8rem ui-monospace, Consolas, monospace; background:var(--hl); border:1px solid var(--hl-line); color:var(--hl-ink); border-radius:5px; padding:1px 7px; }
+
+    .roles__tabs { display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 14px; }
+    .role-tab { display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border-radius:999px; font-weight:700; font-size:.92rem; color:#334155; background:#fff; border:2px solid var(--line); transition:background .15s, color .15s, transform .15s; }
+    .role-tab:hover { transform:translateY(-1px); }
+    .role-tab.is-active { background:#0f172a; color:#fff; border-color:#0f172a; }
+    .role-panel { background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px 20px 8px; animation:rolein .25s ease; --c:var(--accent-600); }
+    .role-panel[hidden] { display:none; }
+    .role-panel h4 { margin:0 0 12px; font-size:1.1rem; }
+    @keyframes rolein { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+
+    .mblock { max-width:780px; margin:10px 0 4px; background:#fff; border-radius:16px; border:2px solid color-mix(in srgb, var(--i1) 60%, #fff); overflow:hidden; }
+    .mblock__head { display:flex; align-items:center; gap:14px; padding:14px 18px; background:linear-gradient(135deg, #0f172a, #134e4a); color:#f8fafc; }
+    .mblock__head strong { display:block; font-size:1rem; }
+    .mblock__sub { display:block; font-size:.82rem; color:#99f6e4; }
+    .mblock__chain { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; background:rgba(242,197,0,.2); color:var(--i1); }
+    .mblock__prev { margin-left:auto; font:600 .76rem ui-monospace, Consolas, monospace; color:#94a3b8; white-space:nowrap; }
+    .mblock__docs { padding:8px 12px; }
+    .mdoc { display:grid; grid-template-columns:26px 1fr auto; grid-template-areas:"box name tags" "box hash hash"; align-items:center; gap:2px 12px; padding:11px 10px; cursor:pointer; position:relative; }
+    .mdoc + .mdoc { border-top:1px solid var(--line); }
+    .mdoc input { position:absolute; opacity:0; pointer-events:none; }
+    .mdoc__box { grid-area:box; width:24px; height:24px; border-radius:7px; border:2px solid #cbd5e1; display:grid; place-items:center; transition:background .15s, border-color .15s; }
+    .mdoc input:checked + .mdoc__box { background:var(--i5d); border-color:var(--i5d); }
+    .mdoc input:checked + .mdoc__box::after { content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; color:#fff; font-size:.75rem; }
+    .mdoc input:focus-visible + .mdoc__box { outline:3px solid var(--accent-200); outline-offset:2px; }
+    .mdoc__name { grid-area:name; font-weight:700; }
+    .mdoc__tags { grid-area:tags; display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .mdoc__hash { grid-area:hash; font:.74rem ui-monospace, Consolas, monospace; color:var(--i4); min-height:1em; }
+    .mtag { display:inline-block; padding:2px 9px; border-radius:999px; font-size:.72rem; font-weight:700; background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0; }
+    .mtag--blocks { background:#fef2f2; color:#b91c1c; border-color:#fecaca; }
+    .mtag--warns { background:#fffbeb; color:#a16207; border-color:#fde68a; }
+    .mstatus { margin:4px 18px 0; padding:11px 14px; border-radius:10px; font-weight:700; font-size:.93rem; }
+    .mstatus--ok { background:#ecfdf5; color:#047857; border:1px solid #a7f3d0; }
+    .mstatus--warn { background:#fffbeb; color:#a16207; border:1px solid #fde68a; }
+    .mstatus--bad { background:#fef2f2; color:#b91c1c; border:1px solid #fecaca; }
+    .mblock__note { margin:8px 18px 14px !important; font-size:.8rem; color:var(--muted); }
+
+    .gloss { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin:6px 0 0; }
+    .gloss__item { padding:14px 16px; border-radius:12px; background:#fff; border:2px solid color-mix(in srgb, var(--c) 40%, #fff); border-top:5px solid var(--c); }
+    .gloss dt { font-weight:800; color:var(--c); margin-bottom:4px; }
+    .gloss__item.i1 dt { color:var(--i1t); }
+    .gloss dd { margin:0; color:var(--muted); font-size:.88rem; }
+    .gcta { text-align:center; padding:8px 0 0; }
+    .gcta h3 { margin:0 0 4px; font-size:1.3rem; }
+
+    @media (max-width: 1100px) { .nav a { padding: 8px 9px; font-size: .84rem; } }
+    @media (max-width: 900px) {
+      .gflow { grid-template-columns:1fr; }
+      .garrow { padding:6px 0; } .garrow > div { display:flex; align-items:center; gap:8px; } .garrow span { display:inline-block; transform:rotate(90deg); }
+      .venn { grid-template-columns:1fr; }
+      .venn > .vl, .venn > .vr, .venn > .vx { grid-column:1; grid-row:auto; padding:14px 16px; }
+      .venn > .vx { margin:-3px 0; border-left:3px solid var(--i4); border-right:3px solid var(--i5d); }
+      .gsteps--row { grid-template-columns:1fr; }
+      .gloss { grid-template-columns:1fr 1fr; }
+      .gmap { position: static; }
+    }
+    @media (max-width: 560px) {
+      .gsec { padding:16px 14px 18px; } .gtags { margin-left:0; }
+      .gloss { grid-template-columns:1fr; }
+      .mdoc { grid-template-areas:"box name" "box tags" "box hash"; grid-template-columns:26px 1fr; }
+      .mdoc__tags { justify-content:flex-start; }
+      .mblock__prev { display:none; }
+    }
+    @media (prefers-reduced-motion: reduce) { .role-panel { animation:none; } }
   </style>
 </head>
 <body>
@@ -381,21 +513,21 @@
       <button class="menu-toggle" id="menuToggle" type="button" data-i18n-aria="nav.menu_open" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <nav class="nav" id="mainNav" data-i18n-aria="nav.main" aria-label="Principal">
         <a href="#what" data-i18n="nav.what">Qué es</a>
-        <a href="#mvp" data-i18n="nav.why">Por qué</a>
+        <a href="#guia" data-i18n="nav.guide">Cómo funciona</a>
+        <a href="#equipo" data-i18n="nav.team">Para tu equipo</a>
         <a href="#model" data-i18n="nav.model">Core + Cloud</a>
         <a href="#p2l" data-i18n="nav.p2l">Integración P2L</a>
         <a href="#pricing" data-i18n="nav.pricing">Planes</a>
-        <a href="#how" data-i18n="nav.how">Cómo funciona</a>
         <a href="#erp" data-i18n="nav.erp">Evolución ERP</a>
         <a href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="nav.oss">Open Source</a>
-        <a class="btn btn--primary nav-cta-mobile" href="https://www.refactorii.com/p2l-tenant/login/tuki-medusa-analytics" data-i18n="nav.open">Abrir Medusa</a>
+        <a class="btn btn--primary nav-cta-mobile" href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="nav.open">Abrir Medusa</a>
       </nav>
       <div class="header-actions">
         <div class="qa-lang-switch" role="group" data-i18n-aria="nav.language" aria-label="Idioma">
           <button type="button" class="qa-lang-switch__btn qa-lang-switch__btn--active" data-set-locale="es" aria-pressed="true">ES</button>
           <button type="button" class="qa-lang-switch__btn" data-set-locale="en" aria-pressed="false">EN</button>
         </div>
-        <a class="btn btn--primary header-cta-desktop" href="https://www.refactorii.com/p2l-tenant/login/tuki-medusa-analytics" data-i18n="nav.open">Abrir Medusa</a>
+        <a class="btn btn--primary header-cta-desktop" href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="nav.open">Abrir Medusa</a>
       </div>
     </div>
   </header>
@@ -409,9 +541,10 @@
           <p class="hero__lead" data-i18n="hero.lead">
             Producto hospedado multi-tenant. El motor open source es Medusa Ledger Core.
           </p>
+          <p class="wl-bar"><span data-i18n="wlbar.label">White label:</span> <a href="https://www.refactorii.com/p2l-tenant/medusa-analytics">www.refactorii.com/p2l-tenant/medusa-analytics</a></p>
           <div class="hero__ctas">
-            <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/login/tuki-medusa-analytics" data-i18n="hero.cta_primary">Abrir Medusa Analytics</a>
-            <a class="btn btn--outline btn--lg" href="https://www.refactorii.com/p2l-tenant/tuki-medusa-analytics" data-i18n="hero.cta_secondary">Ver demo en vivo</a>
+            <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="hero.cta_primary">Abrir Medusa Analytics</a>
+            <a class="btn btn--outline btn--lg" href="https://www.refactorii.com/p2l-tenant/medusa-analytics" data-i18n="hero.cta_secondary">Ver demo en vivo</a>
             <a class="btn btn--outline btn--lg" href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="hero.cta_oss">Librería Open Source</a>
           </div>
           <div class="hero__badges">
@@ -474,7 +607,119 @@
       </div>
     </section>
 
-    <section class="section section--alt" id="mvp">
+
+    <section class="section gd" id="guia">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="g.title">Cómo funciona Medusa, pieza por pieza</h2>
+          <p data-i18n="g.lead">Sin jerga técnica: seis piezas, cada una con su color. Toca una para ver solo lo que hace.</p>
+        </div>
+
+        <div class="gmap">
+          <div class="gmap-h"><strong data-i18n="g.map">Las piezas</strong><span data-i18n="g.map_hint">Toca una para resaltarla. Tócala otra vez para ver todo.</span></div>
+          <div class="gpills" id="gpills"><button type="button" class="gpill i1" data-f="1" aria-pressed="false"><span class="gdot">1</span><span data-i18n="g.p1">La pantalla</span> <small data-i18n="g.p1s">lo que ven los socios</small></button><button type="button" class="gpill i2" data-f="2" aria-pressed="false"><span class="gdot">2</span><span data-i18n="g.p2">El proyecto</span> <small data-i18n="g.p2s">la ficha del negocio</small></button><button type="button" class="gpill i3" data-f="3" aria-pressed="false"><span class="gdot">3</span><span data-i18n="g.p3">El servidor</span> <small data-i18n="g.p3s">guarda las llaves</small></button><button type="button" class="gpill i4" data-f="4" aria-pressed="false"><span class="gdot">4</span><span data-i18n="g.p4">La carpeta</span> <small data-i18n="g.p4s">Dropbox · comprobantes</small></button><button type="button" class="gpill i5" data-f="5" aria-pressed="false"><span class="gdot">5</span><span data-i18n="g.p5">El robot del correo</span> <small data-i18n="g.p5s">Google · cada hora</small></button><button type="button" class="gpill i6" data-f="6" aria-pressed="false"><span class="gdot">6</span><span data-i18n="g.p6">La puerta</span> <small data-i18n="g.p6s">deja pasar archivos</small></button></div>
+        </div>
+
+        <article class="gsec i0" data-inst="1 2 3 4 5 6">
+          <div class="gsec-h"><span class="gnum">1</span><h3 data-i18n="g.s1_t">La idea en una página</h3><div class="gtags"><span class="gtag i1" data-i18n="g.p1">La pantalla</span><span class="gtag i2" data-i18n="g.p2">El proyecto</span><span class="gtag i3" data-i18n="g.p3">El servidor</span><span class="gtag i4" data-i18n="g.p4">La carpeta</span><span class="gtag i5" data-i18n="g.p5">El robot del correo</span></div></div>
+          <p data-i18n="g.s1_p">Cada negocio (proyecto) tiene su propio libro. La pantalla es la misma para todos: lo que cambia es la ficha del proyecto que se abre.</p>
+          <div class="gflow">
+            <div class="gcol"><div class="gbox i1"><b><span>1 · </span><span data-i18n="g.p1">La pantalla</span></b><span data-i18n="g.b1">Muestra los meses, los movimientos y qué comprobante falta.</span></div><div class="gbox i2"><b><span>2 · </span><span data-i18n="g.p2">El proyecto</span></b><span data-i18n="g.b2">Contratos, gastos fijos, socios y qué comprobantes pide cada mes.</span></div></div>
+            <div class="garrow"><div><span>→</span><div class="gcap" data-i18n="g.a1">abre</div></div></div>
+            <div class="gcol"><div class="gbox i6"><b><span>6 · </span><span data-i18n="g.p6">La puerta</span></b><span data-i18n="g.b6">Recibe los envíos de varios MB sin rechazarlos.</span></div><div class="gbox i3"><b><span>3 · </span><span data-i18n="g.p3">El servidor</span></b><span data-i18n="g.b3">Lee los correos, guarda las llaves y decide a qué proyecto va cada archivo.</span></div></div>
+            <div class="garrow"><div><span>⇄</span><div class="gcap" data-i18n="g.a2">guarda / recibe</div></div></div>
+            <div class="gcol"><div class="gbox i4"><b><span>4 · </span><span data-i18n="g.p4">La carpeta</span></b><span data-i18n="g.b4">Guarda cada comprobante con su huella, separado por proyecto.</span></div><div class="gbox i5"><b><span>5 · </span><span data-i18n="g.p5">El robot del correo</span></b><span data-i18n="g.b5">Toma del Gmail los correos de pago y los entrega cada hora.</span></div></div>
+          </div>
+          <div class="gnote gnote--bad"><span data-i18n="g.rule" data-i18n-html><strong>Regla de oro:</strong> la ficha del proyecto viaja dentro de la página web, así que <strong>nunca</strong> lleva claves. Las llaves viven solo en el servidor.</span></div>
+        </article>
+
+        <article class="gsec i2" data-inst="2">
+          <div class="gsec-h"><span class="gnum">2</span><h3 data-i18n="g.s2_t">El proyecto: la ficha del negocio</h3><div class="gtags"><span class="gtag i2" data-i18n="g.p2">El proyecto</span></div></div>
+          <p class="gsub" data-i18n="g.s2_sub">Un proyecto = una ficha. Agregar otro negocio es agregar otra ficha, no programar.</p>
+          <ul class="gdots"><li><span data-i18n="g.s2_1" data-i18n-html><strong>Mes de inicio (genesis):</strong> el primer mes del libro. Ningún contrato puede empezar antes.</span></li><li><span data-i18n="g.s2_2" data-i18n-html><strong>Horizonte:</strong> el último mes que muestra el libro.</span></li><li><span data-i18n="g.s2_3" data-i18n-html><strong>Cuenta y contratos:</strong> a dónde llega el dinero y quién paga qué: mensualidad fija o variable, implementación, módulos extra.</span></li><li><span data-i18n="g.s2_4" data-i18n-html><strong>Gastos fijos:</strong> lo que se paga cada mes, por ejemplo el hosting.</span></li><li><span data-i18n="g.s2_5" data-i18n-html><strong>Socios (nodos):</strong> quiénes participan; la participación se reparte en partes iguales.</span></li><li><span data-i18n="g.s2_6" data-i18n-html><strong>Reglas de comprobantes:</strong> qué soporte pide cada mes y desde cuándo.</span></li><li><span data-i18n="g.s2_7" data-i18n-html><strong>Acceso:</strong> los correos de Google que pueden abrir ese libro.</span></li></ul>
+        </article>
+
+        <article class="gsec i1" data-inst="1">
+          <div class="gsec-h"><span class="gnum">3</span><h3 data-i18n="g.s3_t">La pantalla: un mes = un bloque</h3><div class="gtags"><span class="gtag i1" data-i18n="g.p1">La pantalla</span></div></div>
+          <p class="gsub" data-i18n="g.s3_sub">Cada mes se cierra como un bloque y guarda la huella del mes anterior: si alguien altera un mes, se rompen todos los siguientes.</p>
+          <p data-i18n="g.s3_p">Ejemplo interactivo: marca los comprobantes que ya llegaron y mira cómo cambia el estado del bloque.</p>
+          <div class="mblock" id="mblock">
+            <div class="mblock__head"><span class="mblock__chain" aria-hidden="true"><i class="fa-solid fa-link"></i></span><div><strong data-i18n="g.block">Bloque #6 · octubre 2026</strong><span class="mblock__sub" data-i18n="g.vps">Gasto fijo: hosting del proyecto</span></div><span class="mblock__prev" aria-hidden="true">prev: 9c2e…41af</span></div>
+            <div class="mblock__docs">
+                <label class="mdoc" data-doc="d1" data-sev="warns"><input type="checkbox" checked /><span class="mdoc__box" aria-hidden="true"></span><span class="mdoc__name" data-i18n="g.d1">Recibo del proveedor</span><span class="mdoc__tags"><span class="mtag mtag--warns" data-i18n="g.warns">avisa</span><span class="mtag" data-i18n="g.auto">llega por correo</span></span><code class="mdoc__hash"></code></label>
+                <label class="mdoc" data-doc="d2" data-sev="blocks"><input type="checkbox" checked /><span class="mdoc__box" aria-hidden="true"></span><span class="mdoc__name" data-i18n="g.d2">Pago PSE</span><span class="mdoc__tags"><span class="mtag mtag--blocks" data-i18n="g.blocks">bloquea</span><span class="mtag" data-i18n="g.auto">llega por correo</span></span><code class="mdoc__hash"></code></label>
+                <label class="mdoc" data-doc="d3" data-sev="warns"><input type="checkbox" /><span class="mdoc__box" aria-hidden="true"></span><span class="mdoc__name" data-i18n="g.d3">Factura electrónica (PDF + XML)</span><span class="mdoc__tags"><span class="mtag mtag--warns" data-i18n="g.warns">avisa</span><span class="mtag" data-i18n="g.auto">llega por correo</span></span><code class="mdoc__hash"></code></label>
+                <label class="mdoc" data-doc="d4" data-sev="blocks"><input type="checkbox" checked /><span class="mdoc__box" aria-hidden="true"></span><span class="mdoc__name" data-i18n="g.d4">Consignación del contrato</span><span class="mdoc__tags"><span class="mtag mtag--blocks" data-i18n="g.blocks">bloquea</span><span class="mtag" data-i18n="g.hand">se sube a mano</span></span><code class="mdoc__hash"></code></label>
+            </div>
+            <div class="mstatus" id="mstatus" role="status" aria-live="polite"></div>
+            <p class="mblock__note" data-i18n="g.m_note">Qué bloquea y qué solo avisa se define en la ficha de cada proyecto. Los valores son de ejemplo.</p>
+          </div>
+          <div class="gnote gnote--ok"><span data-i18n="g.s3_strip" data-i18n-html>Bajo «Estado de cuenta» una franja dice <strong>✓ Dropbox</strong> y <strong>✓ Script</strong> cuando todo está conectado, o <strong>✗</strong> con lo que falta.</span></div>
+        </article>
+
+        <article class="gsec i5" data-inst="5 4 3">
+          <div class="gsec-h"><span class="gnum">4</span><h3 data-i18n="g.s4_t">Los comprobantes llegan solos</h3><div class="gtags"><span class="gtag i4" data-i18n="g.p4">La carpeta</span><span class="gtag i5" data-i18n="g.p5">El robot del correo</span><span class="gtag i3" data-i18n="g.p3">El servidor</span></div></div>
+          <p class="gsub" data-i18n="g.s4_sub">Nadie descarga ni sube archivos: el robot del correo y la carpeta del proyecto trabajan juntos, unidos por una llave.</p>
+          <div class="venn">
+            <div class="vl">
+              <h4><i class="fa-brands fa-dropbox" aria-hidden="true"></i> <span data-i18n="g.vl_t">La carpeta del proyecto (Dropbox)</span></h4>
+              <p class="gsub" data-i18n="g.vl_sub">Una por proyecto: los soportes de un negocio nunca se mezclan con los de otro.</p>
+              <ol class="gsteps"><li><span data-i18n="g.vl_1" data-i18n-html>Cada proyecto tiene su propia carpeta de comprobantes.</span></li><li><span data-i18n="g.vl_2" data-i18n-html>Cada archivo se guarda con su <strong>huella SHA-256</strong>, un código que sale del contenido.</span></li><li><span data-i18n="g.vl_3" data-i18n-html>Si alguien cambia el archivo, la huella ya no coincide y se nota.</span></li></ol>
+            </div>
+            <div class="vx">
+              <div class="vx__k" data-i18n="g.vx_k">Intersección</div>
+              <div data-i18n="g.vx_1">La llave del proyecto une al robot con el libro</div>
+              <code class="ghl"><span data-i18n="g.vx_l">llave del robot</span></code>
+              <div class="vx__eq">=</div>
+              <code class="ghl"><span data-i18n="g.vx_r">llave del servidor</span></code>
+              <small data-i18n="g.vx_2">Mismo valor en los dos lados. Lo que llega con esa llave solo entra a ese proyecto; si no coincide, no entra nada.</small>
+            </div>
+            <div class="vr">
+              <h4><i class="fa-brands fa-google" aria-hidden="true"></i> <span data-i18n="g.vr_t">El robot del correo (Google)</span></h4>
+              <p class="gsub" data-i18n="g.vr_sub">Vive en el Gmail donde llegan los pagos del proyecto.</p>
+              <ol class="gsteps"><li><span data-i18n="g.vr_1" data-i18n-html>Cada hora busca solo tres correos: el recibo, el pago PSE y la factura electrónica.</span></li><li><span data-i18n="g.vr_2" data-i18n-html>Guarda cada correo como PDF junto con sus adjuntos (la factura en PDF y XML).</span></li><li><span data-i18n="g.vr_3" data-i18n-html>Los entrega al servidor con la llave del proyecto.</span></li><li><span data-i18n="g.vr_4" data-i18n-html>Marca lo enviado para no repetirlo; lo que falle se reintenta a la hora siguiente.</span></li></ol>
+            </div>
+          </div>
+          <h4 class="gflow-t" data-i18n="g.flow_t">Del correo al libro, en cinco pasos</h4>
+          <ol class="gsteps gsteps--row"><li class="gstep" data-inst="5" style="--c:var(--i5)"><span data-i18n="g.f1" data-i18n-html><strong>Gmail del proyecto:</strong> llegan el recibo, el pago y la factura.</span></li><li class="gstep" data-inst="5" style="--c:var(--i5)"><span data-i18n="g.f2" data-i18n-html><strong>Robot del correo:</strong> cada hora los toma y los envía.</span></li><li class="gstep" data-inst="3" style="--c:var(--i3)"><span data-i18n="g.f3" data-i18n-html><strong>Servidor:</strong> revisa la llave y lee valor, número de recibo y mes.</span></li><li class="gstep" data-inst="4" style="--c:var(--i4)"><span data-i18n="g.f4" data-i18n-html><strong>Carpeta del proyecto:</strong> guarda el archivo con su huella.</span></li><li class="gstep" data-inst="1" style="--c:var(--i1)"><span data-i18n="g.f5" data-i18n-html><strong>Pantalla:</strong> el mes muestra el comprobante ✓ o lo que falta.</span></li></ol>
+          <div class="gnote"><span data-i18n="g.s4_manual" data-i18n-html>Lo único manual es la <strong>consignación del contrato</strong>: se sube desde el libro al registrar el recaudo.</span></div>
+          <div class="gnote gnote--ok"><span data-i18n="g.s4_safe" data-i18n-html>El robot solo lee esas tres búsquedas, no el resto del correo. Su llave sirve para <strong>entregar</strong> comprobantes, no para leer el libro.</span></div>
+        </article>
+
+        <article class="gsec i3" data-inst="3 6">
+          <div class="gsec-h"><span class="gnum">5</span><h3 data-i18n="g.s5_t">El servidor y la puerta</h3><div class="gtags"><span class="gtag i3" data-i18n="g.p3">El servidor</span><span class="gtag i6" data-i18n="g.p6">La puerta</span></div></div>
+          <ul class="gdots"><li class="gstep" data-inst="3" style="--c:var(--i3)"><span data-i18n="g.s5_1" data-i18n-html><strong>Guarda las llaves</strong> de la carpeta y del robot, una por proyecto. Nunca viajan en la página web.</span></li><li class="gstep" data-inst="3" style="--c:var(--i3)"><span data-i18n="g.s5_2" data-i18n-html><strong>Lee los correos</strong> (número de recibo, valor, mes). Si un proveedor cambia un texto, se ajusta aquí sin tocar el robot.</span></li><li class="gstep" data-inst="3" style="--c:var(--i3)"><span data-i18n="g.s5_3" data-i18n-html><strong>Separa los proyectos:</strong> cada uno con su carpeta, su bandeja de comprobantes y su sala entre socios.</span></li><li class="gstep" data-inst="6" style="--c:var(--i6)"><span data-i18n="g.s5_4" data-i18n-html><strong>La puerta</strong> está ajustada para dejar pasar envíos de varios MB (PDF con adjuntos).</span></li></ul>
+        </article>
+
+        <article class="gsec i0" id="equipo" data-inst="1 2 3 4 5">
+          <div class="gsec-h"><span class="gnum">6</span><h3 data-i18n="g.s6_t">Para tu equipo</h3><div class="gtags"></div></div>
+          <p class="gsub" data-i18n="g.s6_sub">Un mismo libro, tres lecturas. Elige tu perfil.</p>
+          <div class="roles__tabs" role="tablist">
+            <button type="button" class="role-tab is-active" id="tab-eco" role="tab" aria-selected="true" aria-controls="panel-eco"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> <span data-i18n="g.tab_eco">Economista</span></button>
+            <button type="button" class="role-tab" id="tab-acc" role="tab" aria-selected="false" aria-controls="panel-acc"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> <span data-i18n="g.tab_acc">Contador</span></button>
+            <button type="button" class="role-tab" id="tab-ops" role="tab" aria-selected="false" aria-controls="panel-ops"><i class="fa-solid fa-cubes" aria-hidden="true"></i> <span data-i18n="g.tab_ops">Operador del blockchain</span></button>
+          </div>
+            <div class="role-panel" id="panel-eco" role="tabpanel" aria-labelledby="tab-eco"><h4 data-i18n="g.eco_t">Confianza que no cuesta auditar</h4><ol class="gsteps"><li><span data-i18n="g.eco_1" data-i18n-html><strong>Menos asimetría de información:</strong> todos los socios ven el mismo libro, mes a mes, con el soporte de cada movimiento.</span></li><li><span data-i18n="g.eco_2" data-i18n-html><strong>Menor costo de monitoreo:</strong> la revisión deja de ser una auditoría manual; el libro dice qué mes está soportado.</span></li><li><span data-i18n="g.eco_3" data-i18n-html><strong>Reparto verificable:</strong> la participación de cada socio está escrita en la ficha y se aplica igual cada mes.</span></li><li><span data-i18n="g.eco_4" data-i18n-html><strong>Ingresos variables con evidencia:</strong> una mensualidad variable se cierra con la consignación y el valor realmente cobrado.</span></li><li><span data-i18n="g.eco_5" data-i18n-html><strong>Una unidad de negocio = un libro:</strong> sus números nunca se mezclan con los de otra.</span></li></ol></div>
+            <div class="role-panel" id="panel-acc" role="tabpanel" aria-labelledby="tab-acc" hidden><h4 data-i18n="g.acc_t">Cada mes, con su soporte documental</h4><ol class="gsteps"><li><span data-i18n="g.acc_1" data-i18n-html><strong>Soporte por movimiento:</strong> recibo, pago PSE, factura electrónica (PDF y XML) y consignación quedan pegados al mes.</span></li><li><span data-i18n="g.acc_2" data-i18n-html><strong>Huella de cada archivo:</strong> si alguien cambia un soporte, la huella deja de coincidir.</span></li><li><span data-i18n="g.acc_3" data-i18n-html><strong>El documento va al mes correcto:</strong> un recibo que llega el 22 y cobra el mes siguiente se asigna a ese mes; si cayó mal, se mueve.</span></li><li><span data-i18n="g.acc_4" data-i18n-html><strong>Bloquea o avisa:</strong> el pago bloquea; la factura que llega días después solo avisa.</span></li><li><span data-i18n="g.acc_5" data-i18n-html><strong>No reemplaza tu contabilidad:</strong> tu software contable y tus reportes a la DIAN siguen igual. Medusa es la carpeta de soportes que se puede verificar.</span></li></ol></div>
+            <div class="role-panel" id="panel-ops" role="tabpanel" aria-labelledby="tab-ops" hidden><h4 data-i18n="g.ops_t">Cuatro piezas por proyecto, configuradas una vez</h4><ol class="gsteps"><li class="gstep" data-inst="2" style="--c:var(--i2)"><span data-i18n="g.ops_1" data-i18n-html><strong>La ficha del proyecto:</strong> se llena una vez, sin claves.</span></li><li class="gstep" data-inst="3" style="--c:var(--i3)"><span data-i18n="g.ops_2" data-i18n-html><strong>El servidor:</strong> recibe las llaves de la carpeta y del robot.</span></li><li class="gstep" data-inst="4" style="--c:var(--i4)"><span data-i18n="g.ops_3" data-i18n-html><strong>La carpeta Dropbox:</strong> una app por proyecto, conectada una sola vez.</span></li><li class="gstep" data-inst="5" style="--c:var(--i5)"><span data-i18n="g.ops_4" data-i18n-html><strong>El robot del correo:</strong> se pega en el Gmail del proyecto con la misma llave del servidor.</span></li><li class="gstep" data-inst="1" style="--c:var(--i1)"><span data-i18n="g.ops_5" data-i18n-html><strong>La pantalla:</strong> la franja ✓ / ✗ confirma que todo quedó conectado.</span></li></ol></div>
+        </article>
+
+        <article class="gsec i0" data-inst="1 2 3 4 5">
+          <div class="gsec-h"><span class="gnum">7</span><h3 data-i18n="g.s7_t">Glosario sin jerga</h3><div class="gtags"></div></div>
+          <dl class="gloss"><div class="gloss__item i1" data-inst="1"><dt data-i18n="g.gt1">Bloque</dt><dd data-i18n="g.gd1">Un mes del libro. Se cierra con sus movimientos y comprobantes.</dd></div><div class="gloss__item i2" data-inst="2"><dt data-i18n="g.gt2">Genesis</dt><dd data-i18n="g.gd2">El primer mes del libro (bloque #0).</dd></div><div class="gloss__item i4" data-inst="4"><dt data-i18n="g.gt3">Huella SHA-256</dt><dd data-i18n="g.gd3">Código que sale del contenido de un archivo. Si el archivo cambia, el código cambia.</dd></div><div class="gloss__item i1" data-inst="1"><dt data-i18n="g.gt4">Cadena</dt><dd data-i18n="g.gd4">Cada bloque guarda la huella del anterior: alterar un mes rompe los siguientes.</dd></div><div class="gloss__item i2" data-inst="2"><dt data-i18n="g.gt5">Nodo de consenso</dt><dd data-i18n="g.gd5">Un socio que participa del libro.</dd></div><div class="gloss__item i2" data-inst="2"><dt data-i18n="g.gt6">Seed (ficha)</dt><dd data-i18n="g.gd6">El archivo que define un proyecto. Sin claves.</dd></div><div class="gloss__item i3" data-inst="3"><dt data-i18n="g.gt7">Ancla</dt><dd data-i18n="g.gd7">El registro de un pago real dentro de la cadena.</dd></div><div class="gloss__item i5" data-inst="5"><dt data-i18n="g.gt8">Llave del proyecto</dt><dd data-i18n="g.gd8">El valor que comparten el robot del correo y el servidor.</dd></div></dl>
+        </article>
+
+        <div class="gcta">
+          <h3 data-i18n="g.cta_t">Ábrelo en el white label</h3>
+          <div class="pricing-cta">
+            <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/medusa-analytics" data-i18n="g.cta">Abrir Medusa white label</a>
+            <a class="btn btn--outline btn--lg" href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="g.cta2">Iniciar sesión</a>
+          </div>
+          <p class="wl-url"><span data-i18n="wlbar.label">White label:</span> <a href="https://www.refactorii.com/p2l-tenant/medusa-analytics">www.refactorii.com/p2l-tenant/medusa-analytics</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="mvp">
       <div class="container">
         <div class="section__head">
           <h2 data-i18n="mvp.title">MVP | demo</h2>
@@ -488,12 +733,12 @@
           <li data-i18n="mvp.i5">Socket realtime</li>
         </ul>
         <div style="text-align:center;margin-top:28px;">
-          <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/tuki-medusa-analytics" data-i18n="mvp.cta">Entrar al hub</a>
+          <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/medusa-analytics" data-i18n="mvp.cta">Entrar al hub</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="pitch">
+    <section class="section section--alt" id="pitch">
       <div class="container">
         <div class="pitch-grid">
           <article class="pitch"><strong>01</strong><span data-i18n="pitch.p1">Fuente de verdad verificable</span></article>
@@ -562,7 +807,7 @@
           </article>
         </div>
         <div style="text-align:center;margin-top:28px;">
-          <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/tuki-medusa-analytics" data-i18n="p2l.cta">Ver demo Tuk Tuk en vivo</a>
+          <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/medusa-analytics" data-i18n="p2l.cta">Ver demo Tuk Tuk en vivo</a>
         </div>
       </div>
     </section>
@@ -576,9 +821,9 @@
         <table class="pricing-table">
           <thead>
             <tr>
-              <th scope="col">Plan</th>
-              <th scope="col">Incluye</th>
-              <th scope="col">Precio</th>
+              <th scope="col" data-i18n="pricing_table.plan">Plan</th>
+              <th scope="col" data-i18n="pricing_table.includes">Incluye</th>
+              <th scope="col" data-i18n="pricing_table.price">Precio</th>
             </tr>
           </thead>
           <tbody>
@@ -691,7 +936,7 @@
           <h2 data-i18n="cta.title">Prueba Medusa en la unidad demo Tuk Tuk</h2>
           <p data-i18n="cta.text">Tuk Tuk es la unidad de negocio demo donde ya corre el ledger.</p>
           <div class="row">
-            <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/login/tuki-medusa-analytics" data-i18n="cta.primary">Login Medusa Analytics</a>
+            <a class="btn btn--primary btn--lg" href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="cta.primary">Login Medusa Analytics</a>
             <a class="btn btn--outline btn--lg" href="https://www.refactorii.com/p2l-tenant/login/tuki-dashboard" data-i18n="cta.secondary">Dashboard de la unidad demo</a>
           </div>
         </div>
@@ -709,9 +954,12 @@
         <div>
           <h4 data-i18n="footer.product">Producto</h4>
           <ul>
-            <li><a href="https://www.refactorii.com/p2l-tenant/tuki-medusa-analytics" data-i18n="footer.open_hub">Abrir hub</a></li>
-            <li><a href="https://www.refactorii.com/p2l-tenant/login/tuki-medusa-analytics" data-i18n="footer.login">Login Medusa</a></li>
+            <li><a href="https://www.refactorii.com/p2l-tenant/medusa-analytics" data-i18n="footer.open_hub">Abrir hub</a></li>
+            <li><a href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="footer.login">Login Medusa</a></li>
             <li><a href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="footer.oss">Open Source Core</a></li>
+            <li><a href="https://wbsckt3.github.io/medusa-ledger/developers.html" data-i18n="footer.concept">Concepto</a></li>
+            <li><a href="https://wbsckt3.github.io/medusa-ledger/storage.html" data-i18n="footer.storage">Storage SPEC</a></li>
+            <li><a href="https://wbsckt3.github.io/medusa-ledger/manual.html" data-i18n="footer.manual">Manual API</a></li>
           </ul>
         </div>
         <div>
@@ -719,7 +967,7 @@
           <ul>
             <li><a href="https://www.refactorii.com/p2l-tenant/login/tuki" data-i18n="footer.tuki_app">App unidad demo</a></li>
             <li><a href="https://www.refactorii.com/p2l-tenant/login/tuki-dashboard" data-i18n="footer.tuki_dash">Dashboard demo</a></li>
-            <li><a href="https://wbsckt3.github.io/tuk-tuk-mobility/">Landing unidad demo</a></li>
+            <li><a href="https://wbsckt3.github.io/tuk-tuk-mobility/" data-i18n="footer.tuki_landing">Landing unidad demo</a></li>
           </ul>
         </div>
       </div>
@@ -754,6 +1002,66 @@
         menuToggle.textContent = '☰';
       });
     });
+  </script>
+  <script>
+    (function () {
+      /* filtro por pieza (como en la guía operativa) */
+      var pills = document.getElementById('gpills'), active = null;
+      pills.addEventListener('click', function (e) {
+        var p = e.target.closest('.gpill'); if (!p) return;
+        var f = p.getAttribute('data-f');
+        active = active === f ? null : f;
+        pills.querySelectorAll('.gpill').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === active)); });
+        pills.classList.toggle('filtering', !!active);
+        document.body.classList.toggle('gfiltered', !!active);
+        document.querySelectorAll('.gd [data-inst]').forEach(function (el) {
+          el.classList.toggle('match', !!active && el.getAttribute('data-inst').split(' ').indexOf(active) !== -1);
+        });
+      });
+
+      /* perfiles */
+      var tabs = document.querySelectorAll('.role-tab');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (b) {
+            var on = b === tab;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-selected', on ? 'true' : 'false');
+            document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+          });
+        });
+      });
+
+      /* un mes = un bloque */
+      var HASH = { d1: 'a3f1 0b7e … 5d19 9c2e', d2: '7c44 e2a9 … 0f3b 81d6', d3: 'e91b 4c07 … b2aa 3f50', d4: '2d68 91fe … 6c0a e7b4' };
+      var FB = {
+        es: { st_ok: 'Mes soportado: todos los comprobantes, cada uno con su huella.', st_warn: 'Mes soportado con avisos: falta {{list}}.', st_bad: 'Mes incompleto: falta {{list}}.' },
+        en: { st_ok: 'Month supported: every receipt, each with its fingerprint.', st_warn: 'Month supported with warnings: missing {{list}}.', st_bad: 'Month incomplete: missing {{list}}.' }
+      };
+      function tr(k, list) {
+        var s = window.tukiI18n && window.tukiI18n.t ? window.tukiI18n.t('g.' + k, { list: list }) : null;
+        if (!s || s === 'g.' + k) s = FB[(document.documentElement.lang || 'es').indexOf('en') === 0 ? 'en' : 'es'][k].replace('{{list}}', list || '');
+        return s;
+      }
+      function render() {
+        var miss = { blocks: [], warns: [] };
+        document.querySelectorAll('#mblock .mdoc').forEach(function (d) {
+          var on = d.querySelector('input').checked;
+          d.querySelector('.mdoc__hash').textContent = on ? 'SHA-256 ' + HASH[d.getAttribute('data-doc')] : '';
+          if (!on) miss[d.getAttribute('data-sev')].push(d.querySelector('.mdoc__name').textContent.trim().toLowerCase());
+        });
+        var st = document.getElementById('mstatus'), cls, msg;
+        if (miss.blocks.length) { cls = 'bad'; msg = '✗ ' + tr('st_bad', miss.blocks.concat(miss.warns).join(', ')); }
+        else if (miss.warns.length) { cls = 'warn'; msg = '! ' + tr('st_warn', miss.warns.join(', ')); }
+        else { cls = 'ok'; msg = '✓ ' + tr('st_ok'); }
+        st.className = 'mstatus mstatus--' + cls; st.textContent = msg;
+      }
+      document.querySelectorAll('#mblock input').forEach(function (i) { i.addEventListener('change', render); });
+      render();
+      var r0 = window.onTukiI18nReady, c0 = window.onTukiLocaleChange;
+      window.onTukiI18nReady = function () { if (r0) r0.apply(this, arguments); render(); };
+      window.onTukiLocaleChange = function () { if (c0) c0.apply(this, arguments); render(); };
+    })();
   </script>
 </body>
 </html>
