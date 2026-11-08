@@ -501,6 +501,39 @@
       .mblock__prev { display:none; }
     }
     @media (prefers-reduced-motion: reduce) { .role-panel { animation:none; } }
+
+    /* ---- menú: una línea, secundarios en «Más», hamburguesa bajo 1024px ---- */
+    .nav { gap: 2px; }
+    .nav a, .nav-more__btn { white-space: nowrap; }
+    .nav > a { padding: 8px 12px; font-size: .9rem; }
+    .nav-more { position: relative; }
+    .nav-more__btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; font-size: .9rem; font-weight: 600; color: var(--muted); }
+    .nav-more__btn i { font-size: .7rem; transition: transform .15s; }
+    .nav-more__btn:hover, .nav-more.is-open .nav-more__btn { color: var(--ink); background: var(--accent-50); }
+    .nav-more.is-open .nav-more__btn i { transform: rotate(180deg); }
+    .nav-more__menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); min-width: 200px; padding: 8px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 16px 40px rgba(10,10,10,.12); flex-direction: column; gap: 2px; }
+    .nav-more.is-open .nav-more__menu { display: flex; }
+    .nav-more__menu a { display: block; padding: 9px 12px; border-radius: 10px; font-size: .9rem; font-weight: 600; color: var(--muted); }
+    .nav-more__menu a:hover { color: var(--ink); background: var(--accent-50); }
+    .nav a.is-current { color: var(--accent-800); background: var(--accent-50); }
+    @media (max-width: 1023px) {
+      .nav {
+        display: none; position: absolute; top: var(--header-h); left: 0; right: 0;
+        flex-direction: column; align-items: stretch; padding: 12px 16px 16px; gap: 4px;
+        background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 16px 30px rgba(10,10,10,.08);
+        max-height: calc(100vh - var(--header-h)); overflow-y: auto;
+      }
+      .nav.is-open { display: flex; }
+      .nav > a { padding: 11px 12px; border-radius: 10px; }
+      .nav-more__btn { display: none; }
+      .nav-more__menu { display: flex; position: static; transform: none; box-shadow: none; border: 0; padding: 0; min-width: 0; }
+      .nav-more__menu a { padding: 11px 12px; }
+      .menu-toggle { display: inline-flex; order: 3; }
+      .header-actions { margin-left: auto; }
+      .header-cta-desktop { display: none; }
+      .nav-cta-mobile { display: inline-flex !important; margin-top: 6px; }
+    }
+    @media (min-width: 1024px) { .nav-cta-mobile { display: none !important; } }
   </style>
 </head>
 <body>
@@ -515,11 +548,16 @@
         <a href="#what" data-i18n="nav.what">Qué es</a>
         <a href="#guia" data-i18n="nav.guide">Cómo funciona</a>
         <a href="#equipo" data-i18n="nav.team">Para tu equipo</a>
-        <a href="#model" data-i18n="nav.model">Core + Cloud</a>
-        <a href="#p2l" data-i18n="nav.p2l">Integración P2L</a>
         <a href="#pricing" data-i18n="nav.pricing">Planes</a>
-        <a href="#erp" data-i18n="nav.erp">Evolución ERP</a>
-        <a href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="nav.oss">Open Source</a>
+        <div class="nav-more" id="navMore">
+          <button type="button" class="nav-more__btn" id="navMoreBtn" aria-expanded="false" aria-controls="navMoreMenu"><span data-i18n="nav.more">Más</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="nav-more__menu" id="navMoreMenu">
+            <a href="#model" data-i18n="nav.model">Core + Cloud</a>
+            <a href="#p2l" data-i18n="nav.p2l">Integración P2L</a>
+            <a href="#erp" data-i18n="nav.erp">Evolución ERP</a>
+            <a href="https://wbsckt3.github.io/medusa-ledger/" data-i18n="nav.oss">Open Source</a>
+          </div>
+        </div>
         <a class="btn btn--primary nav-cta-mobile" href="https://www.refactorii.com/p2l-tenant/login/medusa-analytics" data-i18n="nav.open">Abrir Medusa</a>
       </nav>
       <div class="header-actions">
@@ -1003,6 +1041,28 @@
       });
     });
   </script>
+  <script>
+    (function () {
+      var more = document.getElementById('navMore'), btn = document.getElementById('navMoreBtn');
+      function set(open) { more.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      btn.addEventListener('click', function (e) { e.stopPropagation(); set(!more.classList.contains('is-open')); });
+      document.addEventListener('click', function (e) { if (!more.contains(e.target)) set(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+      more.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+      var links = {};
+      document.querySelectorAll('#mainNav a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            Object.keys(links).forEach(function (k) { links[k].classList.toggle('is-current', k === en.target.id); });
+          });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        Object.keys(links).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+      }
+    })();
+  </script>
+
   <script>
     (function () {
       /* filtro por pieza (como en la guía operativa) */
